@@ -1,7 +1,7 @@
-name: json_to_form
+name: generate_dynamic_form
 description: The plugin for Flutter converts the JSON format into a custom form.
-version: 0.0.1
-homepage: https://github.com/VictorRancesCode/json_to_form
+version: 0.0.2
+homepage: https://github.com/sathishin91/DynamicForm
 
 dependencies:
   flutter:

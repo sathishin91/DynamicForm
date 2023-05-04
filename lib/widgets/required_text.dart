@@ -24,7 +24,7 @@ class RequiredText extends StatelessWidget {
                 style?.copyWith(
                   color: Colors.red,
                 ) ??
-                Theme.of(context).textTheme.subtitle2?.apply(color: Colors.red),
+                Theme.of(context).textTheme.titleSmall?.apply(color: Colors.red),
           )
         ],
       ),

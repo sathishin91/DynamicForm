@@ -1,9 +1,5 @@
-import 'dart:convert';
-
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-
-import '../functions.dart';
 import '../widgets/required_text.dart';
 import 'meta_styles.dart';
 
@@ -48,11 +44,11 @@ class _SimpleDropSelect extends State<SimpleDropSelect> {
   }
   @override
   Widget build(BuildContext context) {
-    Widget label = SizedBox.shrink();
-    if (Fun.labelHidden(item)) {
-      label = new Text(item['label'],
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0));
-    }
+    // Widget label = SizedBox.shrink();
+    // if (Fun.labelHidden(item)) {
+    //   label = new Text(item['label'],
+    //       style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0));
+    // }
     return new Container(
       width: 300,
       margin: new EdgeInsets.only(top: 5.0),

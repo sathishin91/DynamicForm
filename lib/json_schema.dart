@@ -2,9 +2,8 @@ library json_to_form;
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:json_to_form/components/simple_select_text.dart';
+import 'package:generate_dynamic_form/components/simple_select_text.dart';
 import 'components/index.dart';
-import 'components/simple_dropselect_.dart';
 
 class JsonSchema extends StatefulWidget {
   const JsonSchema({

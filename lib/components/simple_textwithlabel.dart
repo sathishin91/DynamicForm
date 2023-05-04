@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../functions.dart';
 import '../widgets/required_text.dart';
 
 class SimpleTextLabel extends StatefulWidget {
@@ -53,15 +51,15 @@ class _SimpleTextLabel extends State<SimpleTextLabel> {
 
   @override
   Widget build(BuildContext context) {
-    Widget label = SizedBox.shrink();
-    if (Fun.labelHidden(item)) {
-      label = new Container(
-        child: new Text(
-          item['label'],
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
-        ),
-      );
-    }
+    // Widget label = SizedBox.shrink();
+    // if (Fun.labelHidden(item)) {
+    //   label = new Container(
+    //     child: new Text(
+    //       item['label'],
+    //       style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+    //     ),
+    //   );
+    // }
     return Opacity(
       opacity: isEditable ? 1.0 : 0.8,
       child: Column(
@@ -72,8 +70,8 @@ class _SimpleTextLabel extends State<SimpleTextLabel> {
             isMandatory && title!.isNotEmpty
                 ? RequiredText(
               label: title!,
-              style: Theme.of(context).textTheme.subtitle2,
-              starStyle: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleSmall,
+              starStyle: Theme.of(context).textTheme.headlineMedium,
             )
                 : Text(title!),
           TextFormField(
@@ -92,11 +90,11 @@ class _SimpleTextLabel extends State<SimpleTextLabel> {
                   : isMandatory
                   ? RequiredText(
                 label: "$title",
-                style: Theme.of(context).textTheme.subtitle2,
-                starStyle: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleSmall,
+                starStyle: Theme.of(context).textTheme.headlineMedium,
               )
                   : Text("$title",
-                  style: Theme.of(context).textTheme.subtitle2),
+                  style: Theme.of(context).textTheme.titleSmall),
             ),
             keyboardType: item['keyboardType'] ??
                 widget.keyboardTypes[item['key']] ??

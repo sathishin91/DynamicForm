@@ -1,13 +1,7 @@
-import 'dart:convert';
-
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:dropdown_textfield/dropdown_textfield.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-import '../functions.dart';
 import '../widgets/required_text.dart';
-import 'meta_styles.dart';
 
 class SimpleSelectText extends StatefulWidget {
   SimpleSelectText({
@@ -44,7 +38,6 @@ class SimpleSelectText extends StatefulWidget {
 
 class _SimpleSelectText extends State<SimpleSelectText> {
   dynamic item;
-  String? _itemType;
 
   String? isRequired(item, value) {
     if (value.isEmpty) {
@@ -65,11 +58,11 @@ class _SimpleSelectText extends State<SimpleSelectText> {
 
   @override
   Widget build(BuildContext context) {
-    Widget label = SizedBox.shrink();
-    if (Fun.labelHidden(item)) {
-      label = new Text(item['label'],
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0));
-    }
+    // Widget label = SizedBox.shrink();
+    // if (Fun.labelHidden(item)) {
+    //   label = new Text(item['label'],
+    //       style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0));
+    // }
     return new Container(
       width: 300,
       margin: new EdgeInsets.only(top: 5.0),
@@ -103,11 +96,11 @@ class _SimpleSelectText extends State<SimpleSelectText> {
                   label: widget.isMandatory
                       ? RequiredText(
                     label: item['label'],
-                    style: Theme.of(context).textTheme.subtitle2,
-                    starStyle: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleSmall,
+                    starStyle: Theme.of(context).textTheme.headlineMedium,
                   )
                       : Text(item['label'],
-                      style: Theme.of(context).textTheme.subtitle2),
+                      style: Theme.of(context).textTheme.titleSmall),
                 ),
 
                 onChanged: (value) {
