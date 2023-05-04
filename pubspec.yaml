@@ -1,0 +1,21 @@
+name: json_to_form
+description: The plugin for Flutter converts the JSON format into a custom form.
+version: 0.0.1
+homepage: https://github.com/VictorRancesCode/json_to_form
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dropdown_search: ^5.0.2
+  dropdown_textfield: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=1.17.0"
